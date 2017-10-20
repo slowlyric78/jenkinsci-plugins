@@ -1,3 +1,6 @@
+/*
+License will be added here
+*/
 package com.epam.drun.jenkins.plugins;
 
 public class JenkinsPluginMain {
