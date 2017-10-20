@@ -8,5 +8,7 @@ public class JenkinsPluginMainTest {
 
     @Test
     public void sum()
-    {}
+    {
+        System.out.println("Output from the test");
+    }
 }
