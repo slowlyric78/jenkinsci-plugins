@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0117)http://drun.litarg.ru:90/jenkins/job/MODEL%20(DYNAMIC)%20Digit-Recognition/lastSuccessfulBuild/artifact/notebook.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recognizing digits</title><script src="./notebook_files/require.min.js"></script>
-<script src="./notebook_files/jquery.min.js"></script>
+<html>
+<head><meta charset="utf-8" />
+<title>Recognizing digits</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -11743,13 +11743,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="./notebook_files/custom.css">
+<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="./notebook_files/MathJax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config;executed=true">
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -11766,103 +11766,8 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 1px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: .7em}
-.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: #606872; color: white}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
-<body style=""><div id="MathJax_Message" style="display: none;"></div>
+    <!-- End of mathjax configuration --></head>
+<body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -11880,18 +11785,18 @@ div#notebook {
 <span class="c1"># The digits dataset</span>
 <span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
 
-<span class="c1"># The data that we are interested in is made of 8x8 images of digits, let's</span>
+<span class="c1"># The data that we are interested in is made of 8x8 images of digits, let&#39;s</span>
 <span class="c1"># have a look at the first 4 images, stored in the `images` attribute of the</span>
 <span class="c1"># dataset.  If we were working from image files, we could load them using</span>
 <span class="c1"># matplotlib.pyplot.imread.  Note that each image must have the same size. For these</span>
-<span class="c1"># images, we know which digit they represent: it is given in the 'target' of</span>
+<span class="c1"># images, we know which digit they represent: it is given in the &#39;target&#39; of</span>
 <span class="c1"># the dataset.</span>
 <span class="n">images_and_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images_and_labels</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Training: </span><span class="si">%i</span><span class="s1">'</span> <span class="o">%</span> <span class="n">label</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">label</span><span class="p">)</span>
 
 <span class="c1"># To apply a classifier on this data, we need to flatten the image, to</span>
 <span class="c1"># turn the data in a (samples, feature) matrix:</span>
@@ -11908,16 +11813,16 @@ div#notebook {
 <span class="n">expected</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="n">n_samples</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:]</span>
 <span class="n">predicted</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">n_samples</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Classification report for classifier </span><span class="si">%s</span><span class="s2">:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classification report for classifier </span><span class="si">%s</span><span class="s2">:</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
       <span class="o">%</span> <span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Confusion matrix:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion matrix:</span><span class="se">\n</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">predicted</span><span class="p">))</span>
 
 <span class="n">images_and_predictions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="n">n_samples</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:],</span> <span class="n">predicted</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">prediction</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images_and_predictions</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Prediction: </span><span class="si">%i</span><span class="s1">'</span> <span class="o">%</span> <span class="n">prediction</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Prediction: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prediction</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -11937,7 +11842,7 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Classification report for classifier SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape='ovr', degree=3, gamma=0.001, kernel='rbf',
+  decision_function_shape=&#39;ovr&#39;, degree=3, gamma=0.001, kernel=&#39;rbf&#39;,
   max_iter=-1, probability=False, random_state=None, shrinking=True,
   tol=0.001, verbose=False):
              precision    recall  f1-score   support
@@ -11979,7 +11884,95 @@ Confusion matrix:
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAADuCAYAAAAZZe3jAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz%0AAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo%0AdHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAEq1JREFUeJzt3X2QXfVdx/HPB0JFBXYTK7a0kOVh%0AtFrbhId2ptgxwYJWKd2gAkPbkaBAOh3Hon0gf0ATWipBwQYdsSmt7CCtkjCaFGaQEs2mBYUWysYp%0AVGnJA88MEHYJD2KBn3+cm3JJkz3f3T13935v3q8ZZvbmfu/vnPvdez97zr3nx8+lFAEA8thnpncA%0AADAxBDcAJENwA0AyBDcAJENwA0AyBDcAJJMyuG3va/s524c1WQt620n0tnP2tt5OS3C3mrTzv1dt%0Av9h2+8MTHa+U8kop5YBSyoNN1jbB9qdsP257zPaXbb+hw9vbK3pre57tb9h+2vbLnd5ea5t7S2//%0A0PZ3bT9r+2Hbl9ret8Pb3Ft6+2Hb/9PKgydsX2P7gCmPO90TcGxvlXROKWX9ODWzSinT8uZsku2T%0AJX1F0gmSnpC0TtLGUsqF07T9rerd3v6ypPdIGpW0upQya5q3v1W929uPSdok6TuSDpZ0k6TrSimX%0AT9P2t6p3e3uYpBdKKU/ZPlDS1ZIeLaX82VTG7YqPSmxfYvt62/9oe4ekj9h+j+07bI/afsz2X9ve%0Ar1U/y3axPdC6fV3r/ptt77D9n7YPn2ht6/7ftn1/6y/k39i+3fbi4FM5S9KXSinfL6Vsl3SJpOhj%0AO6JXetvq6d9Luq/B9kxJD/X2qlLK7aWU/yulPCzpa5J+rblOTVwP9fbBUspTbf/0qqSjptqfrgju%0AllNVvWD6JF0v6WVJH5f0RlUvovdLWjLO4z8k6SJJcyQ9KOlzE621fbCk1ZI+1druFknv3vkg24e3%0AXjSH7GHct6s6ctlpk6S32O4bZ1+mQy/0tlv1Ym9/XdK9wdpO6one2l5ge0zSs5I+KGnlOPsR0k3B%0AfVsp5cZSyqullBdLKd8ppdxZSnm5lLJZ0pckLRjn8TeUUu4qpfxI0lclzZ9E7QckjZRS1rXu+4Kk%0AH/+1LKVsKaX0l1Ie3cO4B0gaa7u98+cDx9mX6dALve1WPdVb2+dKeqekv6qrnQY90dtSysZSSp+k%0A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%0A7+vY3k/SlZLubGA4eivJ9hxJN0r6S0n9kv5C0o22Z0fH6GiDSimPSLpZ0q9Kku1h25+3fbukFyQd%0AYbvP9ldsP2b7EduX7DxVsb2v7cttP2V7s6ST28dvjXdO2+1zbX/f9g7b99k+xvY/SDpMVWOes/3p%0A3ZxaHWL767a32/6h7XPbxlxue7Xta1vj3mv7uAm0YUDSV0spr5RSHpB0m6S3T7ybr0dvJXWotxL9%0AbfMJSd+Q9N8T7eGe0FsdL+nxUsqa1mv3OklPSvrdiTSx6VOArWqdfkg6VNK9kj7Xuj0s6UFVb65Z%0AkvaT9C+SVkn6WUkHqzp9WNKq/6iqF8yhqo6qNqjtlKg13jmtn0+T9Iikd0mypKMkzd3dKZF2ObVS%0AddR2laT9VZ1+PynpN1r3LZf0v5J+R9K+ki6VdEfbWFdJumqcfvy5pBWt5/pLqk7p30Vvu6u39He3%0A/Zgr6X5JB6j6aGOqH5XQ2+q+D0i6b5d/+4GkL4T7OdlfRM0v6DlJo5K2tZ7AT7c19LNttb8g6aWd%0A97f+7UxJG1o//7ukj7bd95vj/IJukfTxuhfNrr+g1i//FUkHtt1/qaShtl/Q+rb7fkXSixPox/GS%0Afijp5dY2L6a33ddb+rvbba+TdEbr5yFNPbjpbVX7c60+nKnqj9RZkl6VtCraz1nqjEWllPV7uO+h%0Atp/ntnb8Mds7/22ftppDdqnfNs42D5X0wMR3VYdI2l5K2bHLdtpPex5v+/kFSfvbnlVKeXm8gV19%0AlvWvkv5Y1eexb5J0g+0nSilXTWJfJXorqWO9leivJMn2KapC6/pJ7Nee0FtJpZSnbQ9KulzS36r6%0A47Je1RljSKeCezyl7eeHVP1lfeMenuxjqhq/02HjjPuQpCMD29zVo5Lm2D6w7Zd0mKrTq6k6QtIr%0ApZRrW7cftv1Pqk6vphIue0JvO9dbae/q7/skHWd7Zzj1SXrF9jtKKYMNjL+rvam3KqVsVPXxjVqf%0AqW+WdEX08TP67W0p5TFVX3xcYfsg2/vYPtL2glbJakl/Yvutrr5xXTrOcF+W9Enbx7pylO25rfue%0AUPVG390+PCTpPyRdant/2++U9EeSrmvgKd6v6ovyD7We25sknaHq8p+OoredtRf09yJJv6jqs935%0Akr4u6WpJZzcw9rj2gt7K9tG297N9kKoj74dKKbdEH98Nl938gaQ3SLpP0jOSbpD05tZ9V6s6jdgk%0A6buS/nlPg5RS1kj6vKrT5h2S1qr64kKqPpu60Pao7U/u5uFnqvp861FVX4osG+eU7nVsf9H2F/ew%0AT8+q+qb4T1vPbUTS9yRdEhm7AfS2s3q5vztKKY/v/E/VNdjPl1K2R8ZuQM/2tuXTkp5SdUbwZkmn%0ARsb98fitD8sBAEl0wxE3AGACCG4ASIbgBoBkCG4ASKZT13E38o3n6Ohobc3ixYtra0ZGRhrb3vDw%0AcG3N/PnzI5tzfcluNdLboaGh2prly5fX1mzbNt7ch9esXbu2tmZwsLHLg2e0txGR19GiRYtCY61c%0AubK2JvI+CZpsb6VpzIXIazfyHpCkhQsXNrK9JnOBI24ASIbgBoBkCG4ASIbgBoBkCG4ASIbgBoBk%0ACG4ASIbgBoBkZmIhBUmxi+gjF75v2rSptmbBggW1NZK0cePG2prIRJLghfYds3Xr1tqas8/u+P9W%0A+XW2bNkyrdvrdueff35tzcDAQGis6ESdXhF5vpH3YOR9IjU3ya/JXOCIGwCSIbgBIBmCGwCSIbgB%0AIBmCGwCSIbgBIBmCGwCSIbgBIJkZm4ATWbUjMrlmw4YNtTXRC+0jE3COPvro0Fjdrq+vr7ZmbGys%0AkXGkvWuSSFOv7eikpf7+/lBdr4hM3otMXopMppOkdevW1dZM96Q7jrgBIBmCGwCSIbgBIBmCGwCS%0AIbgBIBmCGwCSIbgBIBmCGwCSmbEJOJGJLJHJHZHJDtEJOHPnzq2tGRwcDI01kyKTDyJ9a3KVnMhk%0Ah8iqMDNteHi4tmb58uW1NcuWLautia6AE5kgkuF1GxV57Q4NDdXWRHMhkkOR1bqaxBE3ACRDcANA%0AMgQ3ACRDcANAMgQ3ACRDcANAMgQ3ACRDcANAMi6ldGLcRgaNXCC/ePHi2prIyjaSNG/evNqakZGR%0A0FgBnuTjGultZHJHZFJBdOJBZDLPPffcU1sTXGmkY72NrOQTeY1EaqIrtER6GxkrOElnsr2VGnrt%0ATrfIazySQ5EaBfvLETcAJENwA0AyBDcAJENwA0AyBDcAJENwA0AyBDcAJENwA0AyBDcAJDNjS5dF%0ARGb3jY6ONra9TZs21dZElkQKzpDqmEhPtm3bVlsTWUosOJMxNLsvsixYdHuTEelbZJmwyBJ4kRmY%0A0Rm/EZF96gaRZd/6+/tra5pcBi8yy3X27NmNbS+CI24ASIbgBoBkCG4ASIbgBoBkCG4ASIbgBoBk%0ACG4ASIbgBoBkunoCTkRk0kyTmpzw0ymRCQpnnXVWbU1kMkRUX19fbU10GbROaapvkSX3IpPLohNw%0AIvvUyYlLTYpMnGlq+bjoRLmxsbHamume4MQRNwAkQ3ADQDIENwAkQ3ADQDIENwAkQ3ADQDIENwAk%0AQ3ADQDIupXRi3I4MujuRi/EjEyKk2ASMtWvXNjKOJEeKdqOR3kYmKER6G1lJR5Kuueaa2poGVw6a%0A0d5GRFZSiqwaJElbtmyprYlM+AmabG+laexvZMJRdPLesmXLamsanKwW6i9H3ACQDMENAMkQ3ACQ%0ADMENAMkQ3ACQDMENAMkQ3ACQDMENAMl0agIOAKBDOOIGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBI%0AhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAG%0AgGQIbgBIhuAGgGQIbgBIhuAGgGT+H65gYDsww8LzAAAAAElFTkSuQmCC">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAADuCAYAAAAZZe3jAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4wLCBo
+dHRwOi8vbWF0cGxvdGxpYi5vcmcvpW3flQAAEq1JREFUeJzt3X2QXfVdx/HPB0JFBXYTK7a0kOVh
+tFrbhId2ptgxwYJWKd2gAkPbkaBAOh3Hon0gf0ATWipBwQYdsSmt7CCtkjCaFGaQEs2mBYUWysYp
+VGnJA88MEHYJD2KBn3+cm3JJkz3f3T13935v3q8ZZvbmfu/vnPvdez97zr3nx8+lFAEA8thnpncA
+ADAxBDcAJENwA0AyBDcAJENwA0AyBDcAJJMyuG3va/s524c1WQt620n0tnP2tt5OS3C3mrTzv1dt
+v9h2+8MTHa+U8kop5YBSyoNN1jbB9qdsP257zPaXbb+hw9vbK3pre57tb9h+2vbLnd5ea5t7S2//
+0PZ3bT9r+2Hbl9ret8Pb3Ft6+2Hb/9PKgydsX2P7gCmPO90TcGxvlXROKWX9ODWzSinT8uZsku2T
+JX1F0gmSnpC0TtLGUsqF07T9rerd3v6ypPdIGpW0upQya5q3v1W929uPSdok6TuSDpZ0k6TrSimX
+T9P2t6p3e3uYpBdKKU/ZPlDS1ZIeLaX82VTG7YqPSmxfYvt62/9oe4ekj9h+j+07bI/afsz2X9ve
+r1U/y3axPdC6fV3r/ptt77D9n7YPn2ht6/7ftn1/6y/k39i+3fbi4FM5S9KXSinfL6Vsl3SJpOhj
+O6JXetvq6d9Luq/B9kxJD/X2qlLK7aWU/yulPCzpa5J+rblOTVwP9fbBUspTbf/0qqSjptqfrgju
+llNVvWD6JF0v6WVJH5f0RlUvovdLWjLO4z8k6SJJcyQ9KOlzE621fbCk1ZI+1druFknv3vkg24e3
+XjSH7GHct6s6ctlpk6S32O4bZ1+mQy/0tlv1Ym9/XdK9wdpO6one2l5ge0zSs5I+KGnlOPsR0k3B
+fVsp5cZSyqullBdLKd8ppdxZSnm5lLJZ0pckLRjn8TeUUu4qpfxI0lclzZ9E7QckjZRS1rXu+4Kk
+H/+1LKVsKaX0l1Ie3cO4B0gaa7u98+cDx9mX6dALve1WPdVb2+dKeqekv6qrnQY90dtSysZSSp+k
+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
+7+vY3k/SlZLubGA4eivJ9hxJN0r6S0n9kv5C0o22Z0fH6GiDSimPSLpZ0q9Kku1h25+3fbukFyQd
+YbvP9ldsP2b7EduX7DxVsb2v7cttP2V7s6ST28dvjXdO2+1zbX/f9g7b99k+xvY/SDpMVWOes/3p
+3ZxaHWL767a32/6h7XPbxlxue7Xta1vj3mv7uAm0YUDSV0spr5RSHpB0m6S3T7ybr0dvJXWotxL9
+bfMJSd+Q9N8T7eGe0FsdL+nxUsqa1mv3OklPSvrdiTSx6VOArWqdfkg6VNK9kj7Xuj0s6UFVb65Z
+kvaT9C+SVkn6WUkHqzp9WNKq/6iqF8yhqo6qNqjtlKg13jmtn0+T9Iikd0mypKMkzd3dKZF2ObVS
+ddR2laT9VZ1+PynpN1r3LZf0v5J+R9K+ki6VdEfbWFdJumqcfvy5pBWt5/pLqk7p30Vvu6u39He3
+/Zgr6X5JB6j6aGOqH5XQ2+q+D0i6b5d/+4GkL4T7OdlfRM0v6DlJo5K2tZ7AT7c19LNttb8g6aWd
+97f+7UxJG1o//7ukj7bd95vj/IJukfTxuhfNrr+g1i//FUkHtt1/qaShtl/Q+rb7fkXSixPox/GS
+fijp5dY2L6a33ddb+rvbba+TdEbr5yFNPbjpbVX7c60+nKnqj9RZkl6VtCraz1nqjEWllPV7uO+h
+tp/ntnb8Mds7/22ftppDdqnfNs42D5X0wMR3VYdI2l5K2bHLdtpPex5v+/kFSfvbnlVKeXm8gV19
+lvWvkv5Y1eexb5J0g+0nSilXTWJfJXorqWO9leivJMn2KapC6/pJ7Nee0FtJpZSnbQ9KulzS36r6
+47Je1RljSKeCezyl7eeHVP1lfeMenuxjqhq/02HjjPuQpCMD29zVo5Lm2D6w7Zd0mKrTq6k6QtIr
+pZRrW7cftv1Pqk6vphIue0JvO9dbae/q7/skHWd7Zzj1SXrF9jtKKYMNjL+rvam3KqVsVPXxjVqf
+qW+WdEX08TP67W0p5TFVX3xcYfsg2/vYPtL2glbJakl/Yvutrr5xXTrOcF+W9Enbx7pylO25rfue
+UPVG390+PCTpPyRdant/2++U9EeSrmvgKd6v6ovyD7We25sknaHq8p+OoredtRf09yJJv6jqs935
+kr4u6WpJZzcw9rj2gt7K9tG297N9kKoj74dKKbdEH98Nl938gaQ3SLpP0jOSbpD05tZ9V6s6jdgk
+6buS/nlPg5RS1kj6vKrT5h2S1qr64kKqPpu60Pao7U/u5uFnqvp861FVX4osG+eU7nVsf9H2F/ew
+T8+q+qb4T1vPbUTS9yRdEhm7AfS2s3q5vztKKY/v/E/VNdjPl1K2R8ZuQM/2tuXTkp5SdUbwZkmn
+Rsb98fitD8sBAEl0wxE3AGACCG4ASIbgBoBkCG4ASKZT13E38o3n6Ohobc3ixYtra0ZGRhrb3vDw
+cG3N/PnzI5tzfcluNdLboaGh2prly5fX1mzbNt7ch9esXbu2tmZwsLHLg2e0txGR19GiRYtCY61c
+ubK2JvI+CZpsb6VpzIXIazfyHpCkhQsXNrK9JnOBI24ASIbgBoBkCG4ASIbgBoBkCG4ASIbgBoBk
+CG4ASIbgBoBkZmIhBUmxi+gjF75v2rSptmbBggW1NZK0cePG2prIRJLghfYds3Xr1tqas8/u+P9W
++XW2bNkyrdvrdueff35tzcDAQGis6ESdXhF5vpH3YOR9IjU3ya/JXOCIGwCSIbgBIBmCGwCSIbgB
+IBmCGwCSIbgBIBmCGwCSIbgBIJkZm4ATWbUjMrlmw4YNtTXRC+0jE3COPvro0Fjdrq+vr7ZmbGys
+kXGkvWuSSFOv7eikpf7+/lBdr4hM3otMXopMppOkdevW1dZM96Q7jrgBIBmCGwCSIbgBIBmCGwCS
+IbgBIBmCGwCSIbgBIBmCGwCSmbEJOJGJLJHJHZHJDtEJOHPnzq2tGRwcDI01kyKTDyJ9a3KVnMhk
+h8iqMDNteHi4tmb58uW1NcuWLautia6AE5kgkuF1GxV57Q4NDdXWRHMhkkOR1bqaxBE3ACRDcANA
+MgQ3ACRDcANAMgQ3ACRDcANAMgQ3ACRDcANAMi6ldGLcRgaNXCC/ePHi2prIyjaSNG/evNqakZGR
+0FgBnuTjGultZHJHZFJBdOJBZDLPPffcU1sTXGmkY72NrOQTeY1EaqIrtER6GxkrOElnsr2VGnrt
+TrfIazySQ5EaBfvLETcAJENwA0AyBDcAJENwA0AyBDcAJENwA0AyBDcAJENwA0AyBDcAJDNjS5dF
+RGb3jY6ONra9TZs21dZElkQKzpDqmEhPtm3bVlsTWUosOJMxNLsvsixYdHuTEelbZJmwyBJ4kRmY
+0Rm/EZF96gaRZd/6+/tra5pcBi8yy3X27NmNbS+CI24ASIbgBoBkCG4ASIbgBoBkCG4ASIbgBoBk
+CG4ASIbgBoBkunoCTkRk0kyTmpzw0ymRCQpnnXVWbU1kMkRUX19fbU10GbROaapvkSX3IpPLohNw
+IvvUyYlLTYpMnGlq+bjoRLmxsbHamume4MQRNwAkQ3ADQDIENwAkQ3ADQDIENwAkQ3ADQDIENwAk
+Q3ADQDIupXRi3I4MujuRi/EjEyKk2ASMtWvXNjKOJEeKdqOR3kYmKER6G1lJR5Kuueaa2poGVw6a
+0d5GRFZSiqwaJElbtmyprYlM+AmabG+laexvZMJRdPLesmXLamsanKwW6i9H3ACQDMENAMkQ3ACQ
+DMENAMkQ3ACQDMENAMkQ3ACQDMENAMl0agIOAKBDOOIGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBI
+huAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAGgGQIbgBIhuAG
+gGQIbgBIhuAGgGQIbgBIhuAGgGT+H65gYDsww8LzAAAAAElFTkSuQmCC
+"
+>
 </div>
 
 </div>
@@ -12023,12 +12016,12 @@ Confusion matrix:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
-    <span class="n">image_file</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">'L'</span><span class="p">)</span>
+    <span class="n">image_file</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;image&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
     <span class="n">image_file</span> <span class="o">=</span> <span class="n">image_file</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">BOX</span><span class="p">)</span>
     <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">image_file</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
     <span class="n">array</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">64</span><span class="p">))</span>
     <span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">255</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mi">10</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">array</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s1">'digit'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">array</span><span class="p">])[</span><span class="mi">0</span><span class="p">])}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;digit&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">array</span><span class="p">])[</span><span class="mi">0</span><span class="p">])}</span>
     
 </pre></div>
 
@@ -12042,9 +12035,9 @@ Confusion matrix:
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_file</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'nine.png'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_file</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;nine.png&#39;</span><span class="p">)</span>
 
-<span class="n">data_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">'image'</span><span class="p">:</span> <span class="n">image_file</span><span class="p">}])</span>
+<span class="n">data_frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="n">image_file</span><span class="p">}])</span>
 
 <span class="n">digit</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">prepare</span><span class="p">(</span><span class="n">data_frame</span><span class="p">))</span>
 <span class="n">digit</span>
@@ -12066,7 +12059,7 @@ Confusion matrix:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{'digit': 9}</pre>
+<pre>{&#39;digit&#39;: 9}</pre>
 </div>
 
 </div>
@@ -12081,11 +12074,11 @@ Confusion matrix:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">drun.io</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">drun</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">'/drun/image_recognize.model'</span><span class="p">,</span> 
+<span class="n">model</span> <span class="o">=</span> <span class="n">drun</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">&#39;/drun/image_recognize.model&#39;</span><span class="p">,</span> 
                        <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
                        <span class="n">prepare_func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">prepare</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
                        <span class="n">input_data_frame</span><span class="o">=</span><span class="n">data_frame</span><span class="p">,</span>
-                       <span class="n">version</span><span class="o">=</span><span class="s1">'1.0'</span><span class="p">)</span>
+                       <span class="n">version</span><span class="o">=</span><span class="s1">&#39;1.0&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12095,10 +12088,9 @@ Confusion matrix:
 </div>
     </div>
   </div>
-
+</body>
 
  
 
 
-
-</body></html>
+</html>
