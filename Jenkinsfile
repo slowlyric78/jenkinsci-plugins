@@ -15,6 +15,7 @@ node {
       } else {
          bat(/mvn.cmd -Dmaven.test.failure.ignore clean package/)
       }
+      echo 'X-DRun-Model-Id:Model_1'
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
