@@ -23,7 +23,7 @@ node {
       archive 'src/*.ipynb'
       sh 'cp src/notebook.html notebook.html'
       archive 'notebook.html'
-      archive 'model.json'
+      // archive 'model.json'
 
    }
 }
