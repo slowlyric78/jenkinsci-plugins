@@ -12,7 +12,7 @@ pipeline {
                 script {
                     def workspaceDir = sh 'pwd'
                     echo workspaceDir
-                    echo 'dir: ${ROOT_DIR}'
+                    println 'dir: ${ROOT_DIR}'
                     sh 'cd ${ROOT_DIR}'
                 }
             }
