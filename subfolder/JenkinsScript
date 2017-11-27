@@ -1,9 +1,22 @@
-node {
-    // sh 'printenv'
-
-    def scriptFile = Jenkins.instance.getItemByFullName(env.JOB_NAME).definition.getScriptPath()
+pipeline {
+    agent any
+	environment {
+        def scriptFile = Jenkins.instance.getItemByFullName(env.JOB_NAME).definition.getScriptPath()
+        ROOT_DIR = scriptFile.substring(0, scriptFile.lastIndexOf('/'))      	    
+	}
     
-    // def scriptFile = getClass().protectionDomain.codeSource.location.path
-    
-    echo scriptFile
+    stages {
+        stage('test1')
+        {
+            steps {
+                script {
+                    def workspaceDir = sh 'pwd'
+                    echo workspaceDir
+                    echo ${ROOT_DIR}
+                    sh 'cd ${ROOT_DIR}'
+                }
+            }
+        }
+    }
 }
+
