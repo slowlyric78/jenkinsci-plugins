@@ -1,0 +1,9 @@
+node {
+    // sh 'printenv'
+
+    echo Jenkins.instance.getItemByFullName(env.JOB_NAME).definition.getScriptPath()
+    
+    // def scriptFile = getClass().protectionDomain.codeSource.location.path
+    
+    // echo $scriptFile
+}
