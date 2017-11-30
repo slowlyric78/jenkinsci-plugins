@@ -1,9 +1,24 @@
 node {
-    // sh 'printenv'
+    def drun = load '/home/arudak/Projects/drun-root/jenkins/drun-jenkins-plugin/src/main/groovy/drun.groovy' // env.JENKINS_HOME
+    def myImage = 'php:latest'
+    def modelId = drun.modelId()
 
-    echo Jenkins.instance.getItemByFullName(env.JOB_NAME).definition.getScriptPath()
-    
-    // def scriptFile = getClass().protectionDomain.codeSource.location.path
-    
-    // echo $scriptFile
+    echo drun.rootDir()
+
+
+//     drun.container(myImage) {
+        stage ('setup'){
+            sh 'id'
+            echo 'value = ' + modelId
+        }
+
+//        stage('stage 1'){
+//            sh '/usr/local/bin/php -version'
+//        }
+        stage('stage 2'){
+            drun.runNotebook('testNotebook')
+        }
+
+        
+//    }
 }
