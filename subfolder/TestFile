@@ -1,0 +1,24 @@
+node {
+    def drun = load '/home/arudak/Projects/drun-root/jenkins/drun-jenkins-plugin/src/main/groovy/drun.groovy' // env.JENKINS_HOME
+    def myImage = 'php:latest'
+    def modelId = drun.modelId()
+
+    echo drun.rootDir()
+
+
+//     drun.container(myImage) {
+        stage ('setup'){
+            sh 'id'
+            echo 'value = ' + modelId
+        }
+
+//        stage('stage 1'){
+//            sh '/usr/local/bin/php -version'
+//        }
+        stage('stage 2'){
+            drun.runNotebook('testNotebook')
+        }
+
+        
+//    }
+}
