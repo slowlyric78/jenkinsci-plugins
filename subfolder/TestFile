@@ -1,5 +1,5 @@
 node {
-    def drun = load '/home/arudak/Projects/drun-root/jenkins/drun-jenkins-plugin/src/main/groovy/drun.groovy' // env.JENKINS_HOME
+    def drun = load drun()
     def myImage = 'php:latest'
     def modelId = drun.modelId()
 
